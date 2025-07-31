@@ -33,14 +33,17 @@
 
     <section class="intro">
       <p>
-        Soy desarrollador frontend enfocado en el usuario y en la creación de
-        interfaces modernas. Me apasiona diseñar soluciones simples, efectivas y
-        visualmente atractivas. Tengo formación en programación, UX/UI y
-        análisis de datos. Recientemente completé un curso de Data Analytics,
-        donde trabajé con herramientas como Power BI y SQL, lo que potenció mi
-        perfil con una visión más analítica. Me considero curioso, autodidacta y
-        en constante aprendizaje, siempre listo para afrontar nuevos desafíos y
-        seguir creciendo tanto en lo visual como en lo funcional.
+        <strong>
+          Soy desarrollador frontend enfocado en el usuario y en la creación de
+          interfaces modernas. Me apasiona diseñar soluciones simples, efectivas
+          y visualmente atractivas. Tengo formación en programación, UX/UI y
+          análisis de datos. Recientemente completé un curso de Data Analytics,
+          donde trabajé con herramientas como Power BI y SQL, lo que potenció mi
+          perfil con una visión más analítica. Me considero curioso, autodidacta
+          y en constante aprendizaje, siempre listo para afrontar nuevos
+          desafíos y seguir creciendo tanto en lo visual como en lo
+          funcional.</strong
+        >
       </p>
     </section>
 
@@ -59,79 +62,58 @@
     </section>
 
     <section class="cards">
-      <div class="card">
-        <img
-          src="./img/fastapp.png"
-          alt="FastApp"
-          style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
-        />
-        <h2>FastApp</h2>
-        <p>
-          App web para registrar inasistencias a contraturnos escolares. Pensada
-          para personal administrativo, alumnos y padres. Tecnologías:
-          JavaScript + Firebase.
-        </p>
-        <a
-          href="https://fasta-app.vercel.app/"
-          target="_blank"
-          style="
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3b82f6;
-            font-weight: bold;
-            text-decoration: none;
-          "
-          >Ver  →</a
-        >
-      </div>
-
-      <div class="card">
-        <img
-          src="./img/krustywallet.png"
-          alt="KrustyWallet"
-          style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
-        />
-        <h2>KrustyWallet</h2>
-        <p>
-          Proyecto final para la materia Laboratorio 3. Billetera de
-          criptomonedas desarrollada con Vue.js, Vuex y APIs externas para
-          manejo de usuarios, transacciones y cotización cripto en tiempo real.
-          Incluye login y generación de ID.
-        </p>
-        <a
-          href="https://krustywallet.vercel.app/welcome"
-          target="_blank"
-          style="
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3b82f6;
-            font-weight: bold;
-            text-decoration: none;
-          "
-          >Ver  →</a
-        >
-      </div>
-
-      <div class="card">
-        <h2>Proyecto 3</h2>
-        <p>
-          Descripción breve del proyecto, tecnologías utilizadas y el objetivo
-          principal.
-        </p>
-      </div>
+      <!-- Tus tarjetas de proyectos acá -->
     </section>
 
     <section class="certificados">
       <h2>Certificados</h2>
-      <div class="cert-list">
-        <img src="./img/uxui design.jpg" alt="Certificado Diseño UX/UI" />
-        <h3>Diseño UX/UI</h3>
-        <p>Coderhouse · 2024</p>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          <img src="./img/uxui design.jpg" alt="Certificado UX/UI" />
+          <img src="./img/uxui design.jpg" alt="Certificado 2" />
+          <img src="./img/uxui design.jpg" alt="Certificado 3" />
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
       </div>
+    </section>
+
+    <section class="filosofia">
+      <!-- Tu sección de filosofía -->
     </section>
 
     <footer>
       <p>© 2025 Ignacio Corsini. Todos los derechos reservados.</p>
     </footer>
+
+    <div class="floating-buttons-container">
+      <button class="floating-button contacto" id="btnContacto">
+        <i class="fas fa-paper-plane"></i>
+        <span>Contacto</span>
+      </button>
+
+      <a
+        class="floating-button whatsapp"
+        href="https://wa.me/3564612478"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Modal del Formulario -->
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/mdkkpknp" method="POST">
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu email" required />
+          <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
