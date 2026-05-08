@@ -1,5 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // ===== Dark mode toggle =====
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const root = document.documentElement;
+
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+    localStorage.setItem("theme", theme);
+  }
+
+  const savedTheme = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener("click", () => {
+    applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+
+  // ===== Botón volver arriba =====
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("visible", window.scrollY > 400);
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   // ===== Navbar scroll effect =====
   const navbar = document.getElementById("navbar");
   window.addEventListener("scroll", () => {

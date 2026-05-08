@@ -21,6 +21,9 @@
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#certificados">Certificados</a></li>
       </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
 
     </div>
   </nav>
@@ -37,6 +40,9 @@
         </p>
         <div class="hero-cta">
           <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+          <a href="./CV_Ignacio_Corsini_2026.pdf" download class="btn-cv">
+            <i class="fas fa-download"></i> Descargar CV
+          </a>
           <a href="https://www.linkedin.com/in/nachocorsini" target="_blank" rel="noopener noreferrer" class="btn-ghost">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
@@ -47,7 +53,7 @@
           <img src="./img/nacho.png" alt="Ignacio Corsini" />
         </div>
         <div class="hero-badge">
-          <i class="fas fa-code"></i>
+          <span class="badge-dot"></span>
           <span>Open to work</span>
         </div>
       </div>
@@ -57,6 +63,9 @@
       <i class="fas fa-chevron-down"></i>
     </div>
   </section>
+
+
+  <div class="pulse-sep"></div>
 
   <!-- ===== SOBRE MÍ ===== -->
   <section class="sobre-mi" id="sobre-mi">
@@ -80,10 +89,59 @@
     </div>
   </section>
 
+  <div class="pulse-sep"></div>
+
+  <!-- ===== IDIOMAS ===== -->
+  <section class="idiomas" id="idiomas">
+    <div class="section-inner">
+      <div class="section-label">02 — Idiomas</div>
+      <h2 class="section-title">Idiomas</h2>
+      <p class="section-subtitle">Los idiomas con los que me manejo.</p>
+      <div class="idiomas-grid">
+
+        <div class="idioma-card">
+          <img class="idioma-flag" src="https://flagcdn.com/w40/ar.png" alt="Argentina" />
+          <div class="idioma-info">
+            <span class="idioma-nombre">Español</span>
+            <span class="idioma-nivel">Nativo</span>
+          </div>
+          <div class="idioma-bar">
+            <div class="idioma-bar-fill" style="width: 100%; background: #22c55e;"></div>
+          </div>
+        </div>
+
+        <div class="idioma-card">
+          <img class="idioma-flag" src="https://flagcdn.com/w40/us.png" alt="Estados Unidos" />
+          <div class="idioma-info">
+            <span class="idioma-nombre">Inglés</span>
+            <span class="idioma-nivel">Básico</span>
+          </div>
+          <div class="idioma-bar">
+            <div class="idioma-bar-fill" style="width: 30%; background: var(--blue);"></div>
+          </div>
+        </div>
+
+        <div class="idioma-card">
+          <img class="idioma-flag" src="https://flagcdn.com/w40/it.png" alt="Italia" />
+          <div class="idioma-info">
+            <span class="idioma-nombre">Italiano</span>
+            <span class="idioma-nivel">Livello A1</span>
+          </div>
+          <div class="idioma-bar">
+            <div class="idioma-bar-fill" style="width: 15%; background: var(--blue);"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="pulse-sep"></div>
+
   <!-- ===== FILOSOFÍA ===== -->
   <section class="filosofia" id="filosofia">
     <div class="section-inner">
-      <div class="section-label">02 — Cómo trabajo</div>
+      <div class="section-label">03 — Cómo trabajo</div>
       <h2 class="section-title">Mi filosofía</h2>
       <div class="filosofia-grid">
         <div class="filo-card">
@@ -110,10 +168,13 @@
     </div>
   </section>
 
+
+  <div class="pulse-sep"></div>
+
   <!-- ===== HABILIDADES ===== -->
   <section class="skills" id="habilidades">
     <div class="section-inner">
-      <div class="section-label">03 — Tecnologías</div>
+      <div class="section-label">04 — Tecnologías</div>
       <h2 class="section-title">Habilidades</h2>
       <p class="section-subtitle">Las tecnologías con las que trabajo día a día.</p>
       <div class="skills-list">
@@ -130,10 +191,13 @@
     </div>
   </section>
 
+
+  <div class="pulse-sep"></div>
+
   <!-- ===== PROYECTOS ===== -->
   <section class="proyectos" id="proyectos">
     <div class="section-inner">
-      <div class="section-label">04 — Trabajo</div>
+      <div class="section-label">05 — Trabajo</div>
       <h2 class="section-title">Proyectos</h2>
       <p class="section-subtitle">Algunos de los proyectos en los que trabajé — del concepto a la pantalla.</p>
       <div class="proyectos-carousel">
@@ -234,9 +298,12 @@
       </div>
     </div>
   </section>
+
+  <div class="pulse-sep"></div>
+
   <section class="certificados" id="certificados">
     <div class="section-inner">
-      <div class="section-label">05 — Formación</div>
+      <div class="section-label">06 — Formación</div>
       <h2 class="section-title">Certificados</h2>
       <p class="section-subtitle">Formación que respalda lo que hago.</p>
       <div class="cert-carousel">
@@ -324,6 +391,10 @@
       </form>
     </div>
   </div>
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
 </body>
 </html>
