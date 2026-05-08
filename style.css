@@ -142,7 +142,10 @@ body {
   justify-content: center;
   transition: all var(--transition);
   flex-shrink: 0;
-  margin-left: auto;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .theme-toggle:hover {
