@@ -1,52 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ignacio Corsini - Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Ignacio Corsini — Frontend Developer, UX/UI Designer y Data Analytics." />
+  <title>Ignacio Corsini — Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body>
 
-  <body>
-    <header>
-      <h1>Ignacio Corsini</h1>
-      <p>Frontend Developer | UX/UI Designer | Data Analytics</p>
-    </header>
+  <!-- ===== NAV ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificados">Certificados</a></li>
+      </ul>
 
-    <section class="profile">
-      <img
-        src="./img/nacho.png"
-        alt="Foto de Ignacio Corsini"
-      />
-    </section>
+    </div>
+  </nav>
 
-    <section class="intro">
-      <p>
-        <strong>
-          Soy desarrollador frontend enfocado en el usuario y en la creación de
-          interfaces modernas. Me apasiona diseñar soluciones simples, efectivas
-          y visualmente atractivas. Tengo formación en programación, UX/UI y
-          análisis de datos. Recientemente completé un curso de Data Analytics,
-          donde trabajé con herramientas como Power BI y SQL, lo que potenció mi
-          perfil con una visión más analítica. Me considero curioso, autodidacta
-          y en constante aprendizaje, siempre listo para afrontar nuevos
-          desafíos y seguir creciendo tanto en lo visual como en lo
-          funcional.</strong
-        >
-      </p>
-    </section>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">Técnico Programador · Frontend Developer · UX/UI · Data Analytics</span>
+        <h1 class="hero-name">Ignacio<br/><em>Corsini</em></h1>
+        <p class="hero-desc">
+          Desarrollo interfaces modernas, funcionales y centradas en el usuario.
+          Combino diseño, código y análisis de datos para crear soluciones que realmente importan.
+        </p>
+        <div class="hero-cta">
+          <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+          <a href="https://www.linkedin.com/in/nachocorsini" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-ring">
+          <img src="./img/nacho.png" alt="Ignacio Corsini" />
+        </div>
+        <div class="hero-badge">
+          <i class="fas fa-code"></i>
+          <span>Open to work</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
 
-    <section class="skills">
-      <h2>Habilidades</h2>
+  <!-- ===== SOBRE MÍ ===== -->
+  <section class="sobre-mi" id="sobre-mi">
+    <div class="section-inner">
+      <div class="section-label">01 — Sobre mí</div>
+      <h2 class="section-title">Quién soy</h2>
+      <div class="sobre-card">
+        <div class="sobre-badge">
+          🎓 Técnico Programador · Recibido el 3 de marzo de 2025
+        </div>
+        <p class="sobre-bio">
+          Soy desarrollador frontend enfocado en el usuario y en la creación de interfaces modernas. Me apasiona diseñar soluciones simples, efectivas y visualmente atractivas.
+        </p>
+        <p class="sobre-bio">
+          Tengo formación en programación, UX/UI y análisis de datos. Recientemente completé un curso de Data Analytics trabajando con Power BI y SQL, lo que potenció mi perfil con una visión más analítica.
+        </p>
+        <p class="sobre-bio">
+          Me considero curioso, autodidacta y en constante aprendizaje — siempre listo para afrontar nuevos desafíos y seguir creciendo tanto en lo visual como en lo funcional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILOSOFÍA ===== -->
+  <section class="filosofia" id="filosofia">
+    <div class="section-inner">
+      <div class="section-label">02 — Cómo trabajo</div>
+      <h2 class="section-title">Mi filosofía</h2>
+      <div class="filosofia-grid">
+        <div class="filo-card">
+          <i class="fas fa-user-check"></i>
+          <h3>Usuario primero</h3>
+          <p>Cada decisión de diseño parte de la experiencia real del usuario. La estética es el resultado, no el punto de partida.</p>
+        </div>
+        <div class="filo-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Mentalidad de crecimiento</h3>
+          <p>Cada proyecto me deja algo nuevo. Me gusta salir de mi zona de confort, enfrentar desafíos que me exigen pensar diferente y encontrar el camino en el proceso.</p>
+        </div>
+        <div class="filo-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Diseño centrado</h3>
+          <p>Me importa que lo que construyo se vea bien, pero más me importa que funcione. Diseño pensando en quien lo va a usar, no en impresionar.</p>
+        </div>
+        <div class="filo-card">
+          <i class="fas fa-infinity"></i>
+          <h3>Aprendizaje continuo</h3>
+          <p>La tecnología cambia rápido. Me mantengo al día con nuevas herramientas, frameworks y tendencias constantemente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section class="skills" id="habilidades">
+    <div class="section-inner">
+      <div class="section-label">03 — Tecnologías</div>
+      <h2 class="section-title">Habilidades</h2>
+      <p class="section-subtitle">Las tecnologías con las que trabajo día a día.</p>
       <div class="skills-list">
         <span class="skill"><i class="fab fa-js"></i> JavaScript</span>
         <span class="skill"><i class="fab fa-vuejs"></i> Vue.js</span>
@@ -56,196 +125,205 @@
         <span class="skill"><i class="fas fa-chart-bar"></i> Power BI</span>
         <span class="skill"><i class="fas fa-code"></i> SQL</span>
         <span class="skill"><i class="fab fa-figma"></i> Figma</span>
+        <span class="skill"><i class="fas fa-robot"></i> Claude AI</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <img
-          src="./img/fastapp.png"
-          loading="lazy"
-          decoding="async"
-          alt="FastApp"
-          style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
-        />
-        <h2>FastApp</h2>
-        <p>
-          App web para registrar inasistencias a contraturnos escolares. Pensada
-          para personal administrativo, alumnos y padres. Tecnologías:
-          JavaScript + Firebase.
-        </p>
-        <a
-          href="https://fasta-app.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3b82f6;
-            font-weight: bold;
-            text-decoration: none;
-          "
-          >Ver demo →</a
-        >
-      </div>
+  <!-- ===== PROYECTOS ===== -->
+  <section class="proyectos" id="proyectos">
+    <div class="section-inner">
+      <div class="section-label">04 — Trabajo</div>
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">Algunos de los proyectos en los que trabajé — del concepto a la pantalla.</p>
+      <div class="proyectos-carousel">
+        <button class="proj-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
 
-      <div class="card">
-        <img
-          src="./img/krustywallet.png"
-          loading="lazy"
-          decoding="async"
-          alt="KrustyWallet"
-          style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
-        />
-        <h2>KrustyWallet</h2>
-        <p>
-          Proyecto final para la materia Laboratorio 3. Billetera de
-          criptomonedas desarrollada con Vue.js, Vuex y APIs externas para
-          manejo de usuarios, transacciones y cotización cripto en tiempo real.
-          Incluye login y generación de ID.
-        </p>
-        <a
-          href="https://krustywallet.vercel.app/welcome"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3b82f6;
-            font-weight: bold;
-            text-decoration: none;
-          "
-          >Ver demo →</a
-        >
-      </div>
+        <div class="proyectos-track-wrap">
+          <div class="proyectos-track">
 
-      <div class="card">
-        <img
-          src="./img/powerbi.png"
-          loading="lazy"
-          decoding="async"
-          alt="Dashboard Power BI"
-          style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
-        />
-        <h2>Proyecto Power BI</h2>
-        <p>
-          Visualización interactiva desarrollada con Power BI basada en un
-          dataset de videojuegos. Permite explorar ventas globales, géneros,
-          consolas y regiones. Ideal para análisis de mercado y toma de
-          decisiones.
-        </p>
-        <a
-          href="https://www.youtube.com/watch?v=xVYNPvhD-Yo"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3b82f6;
-            font-weight: bold;
-            text-decoration: none;
-          "
-          >Ver demo →</a
-        >
-      </div>
-    </section>
+            <div class="card">
+              <div class="card-img-wrap">
+                <img src="./img/fastapp.png" loading="lazy" decoding="async" alt="FastApp" />
+                <div class="card-overlay">
+                  <a href="https://fasta-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link-btn">
+                    <i class="fas fa-external-link-alt"></i> Ver demo
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>JavaScript</span><span>Firebase</span>
+                </div>
+                <h2>FastApp</h2>
+                <p>App web para registrar inasistencias a contraturnos escolares. Pensada para personal administrativo, alumnos y padres.</p>
+              </div>
+            </div>
 
-    <section class="certificados">
-      <h2>Certificados</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn prev">&#10094;</button>
-        <div class="carousel-track">
-          <img src="./img/uxui_design.jpg" alt="Certificado UX/UI" />
-          <img src="./img/data_analytics.png" alt="Certificado 2" />
-          <img src="./img/excel.png" alt="Certificado 3" />
+            <div class="card">
+              <div class="card-img-wrap">
+                <img src="./img/krustywallet.png" loading="lazy" decoding="async" alt="KrustyWallet" />
+                <div class="card-overlay">
+                  <a href="https://krustywallet.vercel.app/welcome" target="_blank" rel="noopener noreferrer" class="card-link-btn">
+                    <i class="fas fa-external-link-alt"></i> Ver demo
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>Vue.js</span><span>Vuex</span><span>API</span>
+                </div>
+                <h2>KrustyWallet</h2>
+                <p>Billetera de criptomonedas con login, transacciones y cotización cripto en tiempo real. Generación de ID incluida.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrap">
+                <img src="./img/powerbi.png" loading="lazy" decoding="async" alt="Dashboard Power BI" />
+                <div class="card-overlay">
+                  <a href="https://www.youtube.com/watch?v=xVYNPvhD-Yo" target="_blank" rel="noopener noreferrer" class="card-link-btn">
+                    <i class="fas fa-external-link-alt"></i> Ver demo
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>Power BI</span><span>Data Analytics</span>
+                </div>
+                <h2>Dashboard Power BI</h2>
+                <p>Visualización interactiva de ventas de videojuegos. Explora géneros, consolas y regiones para análisis de mercado.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img-wrap">
+                <img src="./img/gymweb.png" loading="lazy" decoding="async" alt="Oxígeno Gym" />
+                <div class="card-overlay">
+                  <a href="https://gymsilcortech.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link-btn">
+                    <i class="fas fa-external-link-alt"></i> Ver demo
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>React</span><span>TypeScript</span><span>MongoDB</span>
+                </div>
+                <h2>Oxígeno Gym</h2>
+                <p>App de gestión para gimnasios. Permite llevar el registro de socios, control de pagos y balance económico en un solo lugar.</p>
+                <div class="card-tooltip-wrap">
+                  <i class="fas fa-circle-info tooltip-icon"></i>
+                  <div class="tooltip-box">
+                    <strong>Demo:</strong><br/>
+                    DNI: 1234567<br/>
+                    Contraseña: admin123
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <button class="carousel-btn next">&#10095;</button>
+
+        <button class="proj-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
       </div>
-    </section>
 
-    <section class="filosofia">
-      <!-- Tu sección de filosofía -->
-    </section>
+      <!-- Dots -->
+      <div class="proj-dots"></div>
 
-    <footer>
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          max-width: 900px;
-          margin: 0 auto;
-        "
-      >
-        <!-- Izquierda: LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/nachocorsini"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          title="LinkedIn"
-          style="
-            color: inherit;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-          "
-        >
-          <i class="fab fa-linkedin" style="font-size: 1.25rem"></i>
-        </a>
-
-        <!-- Centro: texto -->
-        <p style="margin: 0">
-          © 2025 Ignacio Corsini. Todos los derechos reservados.
-        </p>
-
-        <!-- Derecha: GitHub -->
-        <a
-          href="https://github.com/NachoCorsini"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          title="GitHub"
-          style="
-            color: inherit;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-          "
-        >
-          <i class="fab fa-github" style="font-size: 1.25rem"></i>
-        </a>
-      </div>
-    </footer>
-
-    <div class="floating-buttons-container">
-      <button class="floating-button contacto" id="btnContacto">
-        <i class="fas fa-paper-plane"></i>
-        <span>Contacto</span>
-      </button>
-
-      <a
-        class="floating-button whatsapp"
-        href="https://wa.me/3564612478"
-        target="_blank"
-      >
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-      </a>
-    </div>
-
-    <!-- Modal del Formulario -->
-    <div class="modal" id="contactModal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/mdkkpknp" method="POST">
-          <input type="text" name="nombre" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu email" required />
-          <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
       </div>
     </div>
-  </body>
+  </section>
+  <section class="certificados" id="certificados">
+    <div class="section-inner">
+      <div class="section-label">05 — Formación</div>
+      <h2 class="section-title">Certificados</h2>
+      <p class="section-subtitle">Formación que respalda lo que hago.</p>
+      <div class="cert-carousel">
+        <button class="cert-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="cert-track-wrap">
+          <div class="cert-track">
+
+            <div class="cert-thumb" data-img="./img/uxui_design.jpg" data-title="Diseño UX/UI Flex">
+              <img src="./img/uxui_design.jpg" alt="Certificado UX/UI Design" loading="lazy" />
+              <div class="cert-thumb-overlay"><i class="fas fa-expand"></i></div>
+              <span class="cert-label">UX/UI Design</span>
+            </div>
+
+            <div class="cert-thumb" data-img="./img/data_analytics.png" data-title="Data Analytics">
+              <img src="./img/data_analytics.png" alt="Certificado Data Analytics" loading="lazy" />
+              <div class="cert-thumb-overlay"><i class="fas fa-expand"></i></div>
+              <span class="cert-label">Data Analytics</span>
+            </div>
+
+            <div class="cert-thumb" data-img="./img/excel.png" data-title="Excel">
+              <img src="./img/excel.png" alt="Certificado Excel" loading="lazy" />
+              <div class="cert-thumb-overlay"><i class="fas fa-expand"></i></div>
+              <span class="cert-label">Excel</span>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="cert-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div class="cert-dots"></div>
+    </div>
+  </section>
+
+  <!-- Modal certificado -->
+  <div class="cert-modal" id="certModal">
+    <div class="cert-modal-inner">
+      <button class="cert-modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      <p class="cert-modal-title"></p>
+      <img class="cert-modal-img" src="" alt="" />
+    </div>
+  </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">Diseñado y desarrollado por Ignacio Corsini</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/nachocorsini" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/NachoCorsini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOTONES FLOTANTES ===== -->
+  <div class="floating-buttons-container">
+    <button class="floating-button contacto" id="btnContacto2">
+      <i class="fas fa-paper-plane"></i>
+      <span>Contacto</span>
+    </button>
+    <a class="floating-button whatsapp" href="https://wa.me/3564612478" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-label="Formulario de contacto">
+    <div class="modal-content">
+      <button class="close" aria-label="Cerrar">&times;</button>
+      <h2>Hablemos</h2>
+      <p class="modal-subtitle">Respondó en menos de 24hs.</p>
+      <form action="https://formspree.io/f/mdkkpknp" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu email" required />
+        <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+
+</body>
 </html>
