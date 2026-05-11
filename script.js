@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
   certModal?.addEventListener("click", e => { if (e.target === certModal) closeCertModal(); });
   window.addEventListener("keydown", e => { if (e.key === "Escape") closeCertModal(); });
 
-  // ===== Reveal on scroll (cards de proyectos) =====
+  // ===== Reveal on scroll (secciones y cards) =====
   const revealEls = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver((entries) => {
@@ -232,11 +232,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add("visible");
-        }, i * 120);
+        }, 80);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.08 });
 
   revealEls.forEach(el => observer.observe(el));
 

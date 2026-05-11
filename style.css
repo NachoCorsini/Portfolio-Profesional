@@ -127,7 +127,29 @@ body {
   color: var(--blue);
 }
 
-/* ===== THEME TOGGLE ===== */
+/* ===== LANG TOGGLE ===== */
+.lang-toggle {
+  position: absolute;
+  right: 4.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--text-light);
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.6rem;
+  transition: all var(--transition);
+}
+
+.lang-toggle:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+
 .theme-toggle {
   width: 36px;
   height: 36px;
@@ -151,7 +173,6 @@ body {
 .theme-toggle:hover {
   border-color: var(--blue);
   color: var(--blue);
-  transform: rotate(15deg);
 }
 
 
@@ -475,7 +496,7 @@ body {
 
 /* ===== IDIOMAS ===== */
 .idiomas {
-  background: var(--grad-b);
+  background: var(--grad-c);
 }
 
 .idiomas-grid {
@@ -543,7 +564,7 @@ body {
 }
 
 .filosofia {
-  background: var(--grad-c);
+  background: var(--grad-b);
 }
 
 .filosofia-grid {
@@ -590,7 +611,7 @@ body {
 
 /* ===== HABILIDADES ===== */
 .skills {
-  background: var(--grad-b);
+  background: var(--grad-c);
 }
 
 .skills-list {
@@ -625,7 +646,7 @@ body {
 
 /* ===== PROYECTOS ===== */
 .proyectos {
-  background: var(--grad-c);
+  background: var(--grad-b);
 }
 
 .proyectos .section-inner {
@@ -866,7 +887,7 @@ body {
 
 /* ===== CERTIFICADOS CARRUSEL ===== */
 .certificados {
-  background: var(--grad-b);
+  background: var(--grad-c);
 }
 
 .cert-carousel {
