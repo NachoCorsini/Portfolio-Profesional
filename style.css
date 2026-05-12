@@ -1304,6 +1304,7 @@ footer {
 }
 
 
+
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column-reverse;
@@ -1312,11 +1313,11 @@ footer {
   }
 
   .hero-desc { max-width: 100%; }
-  .hero-cta { justify-content: center; }
+  .hero-cta { justify-content: center; flex-wrap: wrap; }
 
   .profile-ring {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   .hero-badge {
@@ -1324,20 +1325,80 @@ footer {
     bottom: 0;
   }
 
+  /* Nav mobile - ocultar links, mantener botones */
   .nav-links { display: none; }
 
+  .lang-toggle {
+    right: 3.5rem;
+  }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     text-align: center;
   }
 
+  /* Floating buttons abajo */
   .floating-buttons-container {
     top: auto;
     bottom: 20px;
     right: 20px;
   }
 
-  .sobre-grid {
-    grid-template-columns: 1fr;
+  /* sobre-mi card */
+  .sobre-card {
+    padding: 1.5rem;
+  }
+
+  /* Idiomas */
+  .idiomas-grid {
+    max-width: 100%;
+  }
+
+  /* Filosofia grid */
+  .filosofia-grid {
+    flex-direction: column;
+  }
+  .filo-card {
+    flex: 1 1 100%;
+  }
+
+  /* Skills */
+  .skills-list {
+    justify-content: center;
+  }
+
+  /* Proyectos carousel — 1 card visible en mobile */
+  .proyectos-carousel {
+    gap: 0.5rem;
+  }
+
+  .proj-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* Certificados carousel — 1 visible en mobile */
+  .cert-carousel {
+    gap: 0.5rem;
+  }
+
+  .cert-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* Section inner padding */
+  .section-inner {
+    padding: 3rem 1.2rem;
+  }
+
+  /* Hero padding */
+  .hero {
+    padding: 7rem 1.2rem 3rem;
   }
 }

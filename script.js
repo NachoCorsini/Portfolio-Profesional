@@ -70,16 +70,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (projTrack && projPrev && projNext) {
     const cards = Array.from(projTrack.querySelectorAll(".card"));
-    const VISIBLE = 3;
     let projIndex = 0;
 
+    function getVisible() {
+      return window.innerWidth <= 768 ? 1 : 3;
+    }
+
     function getCardWidth() {
+      const VISIBLE = getVisible();
       const gap = 24;
       const wrapWidth = projTrack.parentElement.offsetWidth;
       return (wrapWidth - gap * (VISIBLE - 1)) / VISIBLE;
     }
 
     function buildDots() {
+      const VISIBLE = getVisible();
       const total = cards.length - VISIBLE + 1;
       projDotsWrap.innerHTML = "";
       for (let i = 0; i < total; i++) {
@@ -98,11 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function goTo(index) {
+      const VISIBLE = getVisible();
       const cardW = getCardWidth();
       const gap = 24;
       projIndex = index;
       projTrack.style.transform = `translateX(-${projIndex * (cardW + gap)}px)`;
-      cards.forEach((c, i) => {
+      cards.forEach((c) => {
         c.style.minWidth = cardW + "px";
         c.style.maxWidth = cardW + "px";
       });
@@ -123,13 +129,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     projNext.addEventListener("click", () => {
+      const VISIBLE = getVisible();
       if (projIndex < cards.length - VISIBLE) goTo(projIndex + 1);
     });
     projPrev.addEventListener("click", () => {
       if (projIndex > 0) goTo(projIndex - 1);
     });
 
-    window.addEventListener("resize", () => goTo(projIndex));
+    window.addEventListener("resize", () => { buildDots(); goTo(0); });
     init();
   }
 
@@ -141,17 +148,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (certTrack && certPrev && certNext) {
     const certItems = Array.from(certTrack.querySelectorAll(".cert-thumb"));
-    const CERT_VISIBLE = 3;
     let certIndex = 0;
 
+    function getCertVisible() {
+      return window.innerWidth <= 768 ? 1 : 3;
+    }
+
     function getCertWidth() {
+      const VISIBLE = getCertVisible();
       const gap = 24;
       const wrapWidth = certTrack.parentElement.offsetWidth;
-      return (wrapWidth - gap * (CERT_VISIBLE - 1)) / CERT_VISIBLE;
+      return (wrapWidth - gap * (VISIBLE - 1)) / VISIBLE;
     }
 
     function buildCertDots() {
-      const total = Math.max(certItems.length - CERT_VISIBLE + 1, 1);
+      const VISIBLE = getCertVisible();
+      const total = Math.max(certItems.length - VISIBLE + 1, 1);
       certDotsWrap.innerHTML = "";
       for (let i = 0; i < total; i++) {
         const dot = document.createElement("button");
@@ -169,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function goToCert(index) {
+      const VISIBLE = getCertVisible();
       const w = getCertWidth();
       const gap = 24;
       certIndex = index;
@@ -178,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         c.style.maxWidth = w + "px";
       });
       certPrev.disabled = certIndex === 0;
-      certNext.disabled = certIndex >= certItems.length - CERT_VISIBLE;
+      certNext.disabled = certIndex >= certItems.length - VISIBLE;
       updateCertDots();
     }
 
@@ -193,9 +206,12 @@ document.addEventListener("DOMContentLoaded", function () {
       goToCert(0);
     }
 
-    certNext.addEventListener("click", () => { if (certIndex < certItems.length - CERT_VISIBLE) goToCert(certIndex + 1); });
+    certNext.addEventListener("click", () => {
+      const VISIBLE = getCertVisible();
+      if (certIndex < certItems.length - VISIBLE) goToCert(certIndex + 1);
+    });
     certPrev.addEventListener("click", () => { if (certIndex > 0) goToCert(certIndex - 1); });
-    window.addEventListener("resize", () => goToCert(certIndex));
+    window.addEventListener("resize", () => { buildCertDots(); goToCert(0); });
     initCert();
   }
 
