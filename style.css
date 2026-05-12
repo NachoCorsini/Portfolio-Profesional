@@ -1401,4 +1401,23 @@ footer {
   .hero {
     padding: 7rem 1.2rem 3rem;
   }
+
+  /* Botones nav más chicos en mobile */
+  .lang-toggle {
+    right: 3rem;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .theme-toggle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+    right: 0.8rem;
+  }
+
+  /* Ocultar botón volver arriba en mobile */
+  .back-to-top {
+    display: none !important;
+  }
 }
