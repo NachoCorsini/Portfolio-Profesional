@@ -1416,6 +1416,31 @@ footer {
     right: 0.8rem;
   }
 
+  /* Botones flotantes en mobile — fijos antes del footer */
+  .floating-buttons-container {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    background: var(--grad-a);
+    border-top: 1px solid var(--footer-border);
+  }
+
+  .floating-button {
+    max-width: 160px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+  }
+
+  .floating-button span {
+    opacity: 1;
+  }
+
+  .floating-button i {
+    margin-right: 6px;
+  }
+
   /* Ocultar botón volver arriba en mobile */
   .back-to-top {
     display: none !important;
